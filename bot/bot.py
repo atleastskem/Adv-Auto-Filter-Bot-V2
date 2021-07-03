@@ -4,9 +4,9 @@
 
 from pyrogram import Client, __version__
 
-from . import API_HASH, APP_ID, LOGGER, BOT_TOKEN 
+from bot import API_HASH, APP_ID, LOGGER, BOT_TOKEN 
 
-from .user import User
+from bot.user import User
 
 class Bot(Client):
     USER: User = None
