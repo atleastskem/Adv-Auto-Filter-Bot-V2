@@ -8,7 +8,7 @@ import time
 
 from logging.handlers import RotatingFileHandler
 
-from .translation import Translation
+from bot.translation import Translation
 
 # Change Accordingly While Deploying To A VPS
 APP_ID = 6798244
