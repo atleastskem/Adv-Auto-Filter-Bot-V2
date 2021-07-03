@@ -9,7 +9,7 @@ from bot.database import Database # pylint: disable=import-error
 
 db = Database()
 
-@Client.on_message(filters.command(["start"]) & filters.private, group=1)
+@Client.on_message(filters.command(["autostart"]) & filters.private, group=1)
 async def start(bot, update):
     
     try:
@@ -38,7 +38,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    'Developers', url="https://t.me/CrazyBotsz"
+                                    'Owner', url="https://t.me/TeamDaisyX"
                                 )
                         ]
                     ]
@@ -57,7 +57,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    'Developers', url="https://t.me/CrazyBotsz"
+                                    'Owner', url="https://t.me/TeamDaisyX"
                                 )
                         ]
                     ]
@@ -76,7 +76,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    'Developers', url="https://t.me/CrazyBotsz"
+                                    'Owner', url="https://t.me/TeamDaisyX"
                                 )
                         ]
                     ]
@@ -89,10 +89,10 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('Developers', url='https://t.me/CrazyBotsz'),
+        InlineKeyboardButton('Owner', url='https://t.me/TeamDaisyX'),
         InlineKeyboardButton('Source Code 🧾', url ='https://github.com/AlbertEinsteinTG/Adv-Auto-Filter-Bot-V2')
     ],[
-        InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
+        InlineKeyboardButton('Support 🛠', url='https://t.me/DaisySupport_Official')
     ],[
         InlineKeyboardButton('Help ⚙', callback_data="help")
     ]]
@@ -109,7 +109,7 @@ async def start(bot, update):
     )
 
 
-@Client.on_message(filters.command(["help"]) & filters.private, group=1)
+@Client.on_message(filters.command(["autohelp"]) & filters.private, group=1)
 async def help(bot, update):
     buttons = [[
         InlineKeyboardButton('Home ⚡', callback_data='start'),
@@ -129,7 +129,7 @@ async def help(bot, update):
     )
 
 
-@Client.on_message(filters.command(["about"]) & filters.private, group=1)
+@Client.on_message(filters.command(["autoabout"]) & filters.private, group=1)
 async def about(bot, update):
     
     buttons = [[
